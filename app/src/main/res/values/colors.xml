@@ -3,8 +3,14 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="colorRed">#FF0000</color>
-    <color name="colorBlue">#0000FF</color>
-    <color name="colorGreen">#00FF00</color>
+    <color name="colorRed">#F00</color>
+    <color name="colorBlue">#00F</color>
+    <color name="colorGreen">#0F0</color>
+    <color name="colorWhite">#FFF</color>
+    <color name="colorBlack">#000</color>
     <color name="button_sendMessage">#AFBFCF</color>
+    <color name="hints">#568216</color>
+    <color name="colorTimerButton">#BFDFBF</color>
+    <color name="colorTimerButtonText">#333339</color>
+    <color name="colorTimerNumbers">#3e3941</color>
 </resources>

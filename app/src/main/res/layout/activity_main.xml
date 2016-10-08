@@ -18,28 +18,33 @@
         android:id="@+id/main_greetings"
         android:textAlignment="center"
         android:layout_centerHorizontal="true"
+        android:textIsSelectable="true"
+        android:padding="24dp"
         />
 
-    <EditText
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="100dp"
-        android:inputType="text"
         android:textColor="@color/colorRed"
-        android:text="@string/input_sendedMessage"
-        android:id="@+id/input_sendedMessage"
+        android:id="@+id/changeActivity"
         android:layout_below="@id/main_greetings"
         android:textAlignment="center"
+        android:gravity="right|center_horizontal"
+        android:padding="4dp"
+        android:entries="@array/main_spinner"
         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/input_sendedMessage"
+        android:layout_below="@id/changeActivity"
         android:onClick="buttonSendOnClick"
         android:textColor="@color/colorGreen"
         android:text="@string/button_sendMessage"
         android:textAlignment="center"
-        android:textColorLink=""
         android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:drawableLeft="@drawable/logo_test"
+        android:padding="6dp"
         />
 </RelativeLayout>

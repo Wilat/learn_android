@@ -3,4 +3,17 @@
     <string name="main_greetings">Hello, humans! I\'m glad to see you!</string>
     <string name="button_sendMessage">Click me and cry!</string>
     <string name="input_sendedMessage">CLEAR ME</string>
+    <string name="error_message">Oups! Error, sorry!</string>
+    <string name="timer_start">start</string>
+    <string name="timer_pause">pause</string>
+    <string name="timer_stop">stop</string>
+    <string name="send_subject">Subject</string>
+    <string name="send_message">Your message</string>
+    <string name="send_buttonSend">Send</string>
+    <string-array name="main_spinner">
+        <item>Timer</item>
+        <item>Send Message</item>
+        <item>In future</item>
+        <item>In future</item>
+    </string-array>
 </resources>

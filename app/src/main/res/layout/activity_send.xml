@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_error"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerVertical="true"
+    android:layout_centerHorizontal="true"
+    tools:context="com.a16mb.wilat.myapplication.SendActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="12dp"
+        android:hint="@string/send_subject"
+        android:id="@+id/send_subject"
+        android:padding="5dp"
+        android:paddingBottom="2dp"
+        android:maxHeight="24dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:hint="@string/send_message"
+        android:id="@+id/send_message"
+        android:padding="5dp"
+        android:paddingTop="2dp"
+        android:gravity="left|top"
+        android:layout_below="@+id/send_subject"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:onClick="sendButtonOnClick"
+        android:text="@string/send_buttonSend"
+        />
+</RelativeLayout>
