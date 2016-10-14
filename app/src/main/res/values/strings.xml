@@ -7,6 +7,7 @@
     <string name="timer_start">start</string>
     <string name="timer_pause">pause</string>
     <string name="timer_stop">stop</string>
+    <string name="send_email">Email</string>
     <string name="send_subject">Subject</string>
     <string name="send_message">Your message</string>
     <string name="send_buttonSend">Send</string>
@@ -16,4 +17,7 @@
         <item>In future</item>
         <item>In future</item>
     </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

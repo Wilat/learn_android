@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main2"
     android:layout_width="match_parent"
@@ -8,6 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.a16mb.wilat.myapplication.TimerActivity">
 
     <TextView
@@ -16,61 +17,47 @@
         android:textColor="@color/colorTimerNumbers"
         android:textAlignment="center"
         android:textSize="24sp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:padding="5dp"
+        android:layout_margin="5dp"
         android:id="@+id/timerText"
+        android:layout_weight="6"
+        android:gravity="bottom"
+        android:layout_gravity="center_horizontal"
     />
 
     <Button
-        android:minWidth="@dimen/timerButtonMinWidth"
-        android:minHeight="@dimen/timerButtonMinHeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="@dimen/timerButtonPadding"
-        android:id="@+id/timerButtonStart"
+        android:layout_margin="@dimen/timerButtonPadding"
         android:background="@color/colorTimerButton"
         android:textColor="@color/colorTimerButtonText"
         android:text="@string/timer_start"
         android:onClick="buttonStartOnClick"
         android:textSize="@dimen/timerButtonTextSize"
-        android:layout_below="@+id/timerText"
-        android:layout_alignRight="@+id/timerButtonPause"
-        android:layout_alignEnd="@id/timerButtonPause"
-        android:layout_alignLeft="@id/timerButtonPause"
-        android:layout_alignStart="@id/timerButtonPause"
+        android:layout_gravity="bottom|center_horizontal"
         />
 
     <Button
-        android:minWidth="@dimen/timerButtonMinWidth"
-        android:minHeight="@dimen/timerButtonMinHeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="@dimen/timerButtonPadding"
-        android:layout_below="@id/timerButtonStart"
-        android:id="@id/timerButtonPause"
+        android:layout_margin="@dimen/timerButtonPadding"
         android:background="@color/colorTimerButton"
         android:textColor="@color/colorTimerButtonText"
         android:text="@string/timer_pause"
         android:onClick="buttonPauseOnClick"
         android:textSize="@dimen/timerButtonTextSize"
-        android:layout_centerHorizontal="true"/>
+        android:layout_gravity="bottom|center_horizontal"
+        />
 
     <Button
-        android:minWidth="@dimen/timerButtonMinWidth"
-        android:minHeight="@dimen/timerButtonMinHeight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="@dimen/timerButtonPadding"
-        android:id="@+id/timerButtonReset"
+        android:layout_margin="@dimen/timerButtonPadding"
         android:background="@color/colorTimerButton"
         android:textColor="@color/colorTimerButtonText"
         android:text="@string/timer_stop"
         android:onClick="buttonStopOnClick"
         android:textSize="@dimen/timerButtonTextSize"
-        android:layout_below="@id/timerButtonPause"
-        android:layout_alignRight="@id/timerButtonPause"
-        android:layout_alignEnd="@id/timerButtonPause"
-        android:layout_alignLeft="@id/timerButtonPause"
-        android:layout_alignStart="@id/timerButtonPause" />
-</RelativeLayout>
+        android:layout_weight="1"
+        android:layout_gravity="bottom|center_horizontal"
+        />
+</LinearLayout>

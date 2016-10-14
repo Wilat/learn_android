@@ -27,18 +27,18 @@ public class TimerActivity extends Activity {
         time = 0;
     }
     private void mProcess() {
-        Handler handler = new Handler();
-        handler.postDelayed(new Runnable(){
+        final TextView timer = (TextView) findViewById(R.id.timerText);
+        final Handler handler = new Handler();
+        handler.post(new Runnable(){
             public void run() {
                 if (start) time++;
                 int hours = time / 36000;
                 int minutes = time % 36000 / 600 ;
                 int seconds = time % 600 / 10;
                 int milliseconds = time % 10;
-                TextView timer = (TextView) findViewById(R.id.timerText);
                 timer.setText(String.format("%dh:%dm:%ds:%dms", hours, minutes, seconds, milliseconds));
-                mProcess();
+                handler.postDelayed(this, 100);
             }
-        }, 100);
+        });
     }
 }

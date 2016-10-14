@@ -12,11 +12,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="12dp"
+        android:hint="@string/send_email"
+        android:id="@+id/send_email"
+        android:padding="5dp"
+        android:paddingBottom="2dp"
+        android:maxHeight="24dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="12dp"
         android:hint="@string/send_subject"
         android:id="@+id/send_subject"
         android:padding="5dp"
         android:paddingBottom="2dp"
         android:maxHeight="24dp"
+        android:layout_below="@+id/send_email"
         />
 
     <EditText

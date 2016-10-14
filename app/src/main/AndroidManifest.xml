@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".TimerActivity" />
-        <activity android:name=".SendActivity"></activity>
+        <activity android:name=".SendActivity" />
+        <activity android:name=".FragmentTestActivity"></activity>
     </application>
 
 </manifest>
