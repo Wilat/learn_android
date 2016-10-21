@@ -8,20 +8,22 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation = "vertical"
-    tools:context="com.a16mb.wilat.myapplication.FragmentTestActivity">
+    android:orientation = "horizontal"
+    tools:context="com.a16mb.wilat.myapplication.FragmentTestActivity"
+    >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text=""
-        android:id="@+id/fragment_test_first_name"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text=""
-        android:id="@+id/fragment_test_first_description"
+    <fragment
+        class="com.a16mb.wilat.myapplication.TestSecondFragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:id="@+id/fragment_second"
         />
 
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:id="@+id/fragment_first"
+        />
 </LinearLayout>

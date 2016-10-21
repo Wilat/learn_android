@@ -4,13 +4,12 @@ import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 
-public class FragmentTestActivity extends Activity implements TestSecondFragment.Listener {
+public class FragmentTestNonStackActivity extends Activity implements TestSecondFragment.Listener {
     private int mode = -1;
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        itemClicked(savedInstanceState.getInt("mode"), false);
+        itemClicked(savedInstanceState.getInt("mode"));
     }
 
     @Override
@@ -22,23 +21,19 @@ public class FragmentTestActivity extends Activity implements TestSecondFragment
 
     @Override
     public void itemClicked(int mode) {
-        itemClicked(mode, true);
-    }
-    public void itemClicked(int mode, boolean addToStack) {
         if (this.mode == mode) return;
         this.mode = mode;
         TestFirstFragment fragment = new TestFirstFragment();
         fragment.setMode(mode);
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
         transaction.replace(R.id.fragment_first, fragment);
-        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-        if (addToStack) transaction.addToBackStack(null);
+        transaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE);
         transaction.commit();
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle bundle) {
-        super.onSaveInstanceState(bundle);
-        bundle.putInt("mode", mode);
+    protected void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt("mode", mode);
     }
 }

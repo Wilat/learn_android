@@ -8,37 +8,64 @@ import android.widget.TextView;
 
 public class TimerActivity extends Activity {
 
-    boolean start = false;
-    int time = 0;
+    private boolean mStart = false, mHide = false;
+    private int mTime = 0;
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        mStart = savedInstanceState.getBoolean("start");
+        mTime = savedInstanceState.getInt("time");
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer);
         mProcess();
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mHide = false;
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        mHide = true;
+    }
+
     public void buttonStartOnClick(View view) {
-        start = true;
+        mStart = true;
     }
     public void buttonPauseOnClick(View view) {
-        start = false;
+        mStart = false;
     }
     public void buttonStopOnClick(View view) {
-        start = false;
-        time = 0;
+        mStart = false;
+        mTime = 0;
     }
     private void mProcess() {
         final TextView timer = (TextView) findViewById(R.id.timerText);
         final Handler handler = new Handler();
         handler.post(new Runnable(){
             public void run() {
-                if (start) time++;
-                int hours = time / 36000;
-                int minutes = time % 36000 / 600 ;
-                int seconds = time % 600 / 10;
-                int milliseconds = time % 10;
+                if (mStart && !mHide) mTime++;
+                int hours = mTime / 36000;
+                int minutes = mTime % 36000 / 600 ;
+                int seconds = mTime % 600 / 10;
+                int milliseconds = mTime % 10;
                 timer.setText(String.format("%dh:%dm:%ds:%dms", hours, minutes, seconds, milliseconds));
                 handler.postDelayed(this, 100);
             }
         });
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle save) {
+        super.onSaveInstanceState(save);
+        save.putBoolean("start", mStart);
+        save.putInt("time", mTime);
     }
 }
