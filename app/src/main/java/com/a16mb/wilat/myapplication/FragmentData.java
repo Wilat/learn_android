@@ -2,7 +2,7 @@ package com.a16mb.wilat.myapplication;
 
 final class FragmentData{
     private String mName, mDescription;
-    public static final FragmentData[] testFragments = {
+    public static final FragmentData[] STEST_FRAGMENTS = {
             new FragmentData("name1", "description1"),
             new FragmentData("name2", "description2"),
             new FragmentData("name3", "description3"),

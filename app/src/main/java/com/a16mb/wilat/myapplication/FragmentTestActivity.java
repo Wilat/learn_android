@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 
+// TODO: Сдлеть отделюную активность для телефона, отдельную - для планшета.
 public class FragmentTestActivity extends Activity implements TestSecondFragment.Listener {
     private int mode = -1;
 
@@ -25,6 +26,7 @@ public class FragmentTestActivity extends Activity implements TestSecondFragment
         itemClicked(mode, true);
     }
     public void itemClicked(int mode, boolean addToStack) {
+        // TODO: Исправить. При повороте в стек заносится лишний фрагмент.
         if (this.mode == mode) return;
         this.mode = mode;
         TestFirstFragment fragment = new TestFirstFragment();

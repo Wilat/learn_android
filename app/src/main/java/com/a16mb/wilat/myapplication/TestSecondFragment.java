@@ -23,9 +23,9 @@ public class TestSecondFragment extends ListFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        String[] list = new String[FragmentData.testFragments.length];
+        String[] list = new String[FragmentData.STEST_FRAGMENTS.length];
         for(int i = 0; i < list.length; i++) {
-            list[i] = FragmentData.testFragments[i].getName();
+            list[i] = FragmentData.STEST_FRAGMENTS[i].getName();
         }
         ArrayAdapter<String> adapter = new ArrayAdapter<>(inflater.getContext(), android.R.layout.simple_list_item_1, list);
         setListAdapter(adapter);

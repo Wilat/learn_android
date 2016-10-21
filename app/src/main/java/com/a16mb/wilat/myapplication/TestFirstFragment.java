@@ -10,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+// TODO: Добавить вложенную активность, являющуюся меняющим цвета кругом/квадратом.
+
 public class TestFirstFragment extends Fragment {
 
     private int mMode = 0;
@@ -37,7 +39,7 @@ public class TestFirstFragment extends Fragment {
         Context context = getActivity().getApplicationContext();
         LinearLayout layout = new LinearLayout(context);
         TextView textView = new TextView(context);
-        textView.setText(FragmentData.testFragments[mMode].getDescription());
+        textView.setText(FragmentData.STEST_FRAGMENTS[mMode].getDescription());
         layout.addView(textView);
         return layout;
     }

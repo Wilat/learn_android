@@ -11,12 +11,15 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+// TODO: Перенести пункты в отдельное меню. Сделать данную активность экраном приветствия.
+
 public class MainActivity extends ListActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ArrayList<String> list = new ArrayList<>();
+        // TODO: Перенести список в отдельный класс.
         list.add("Timer");
         list.add("Send");
         list.add("Fragments");

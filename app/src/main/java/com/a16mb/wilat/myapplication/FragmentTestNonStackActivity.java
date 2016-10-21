@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 
+// TODO: Сдлеть отделюную активность для телефона, отдельную - для планшета.
+
 public class FragmentTestNonStackActivity extends Activity implements TestSecondFragment.Listener {
     private int mode = -1;
 
