@@ -6,8 +6,6 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.TextView;
 
-// TODO: Реализовать как фрагмент??
-
 public class TimerActivity extends Activity {
 
     private boolean mStart = false, mHide = false;

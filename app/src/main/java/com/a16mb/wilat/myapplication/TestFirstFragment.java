@@ -40,7 +40,9 @@ public class TestFirstFragment extends Fragment {
         LinearLayout layout = new LinearLayout(context);
         TextView textView = new TextView(context);
         textView.setText(FragmentData.STEST_FRAGMENTS[mMode].getDescription());
+        TrafficLightFragment trafficFragment = new TrafficLightFragment();
         layout.addView(textView);
+        //layout.addView(trafficFragment);
         return layout;
     }
 
